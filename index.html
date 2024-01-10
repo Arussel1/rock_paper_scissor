@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    <h1>Rock Paper Scissor</h1>
+    <h2>3 Choices| First to 7| Play against AI</h2>
+    <div class="container1">
+        <h2>Player score: </h2>
+        <h2 id="pscore">0</h2>
+        <h2> Computer score: </h2>
+        <h2 id="cscore">0</h2>
+    </div>
+    <h2 id="displaytext">Start the game by clicking at your choice</h2>
+    <div class="container">
+        <button data-value="Rock" class="button" id="rock" onclick="play(this.dataset.value)">
+            <img id="Rock" src="rock.png" alt="rock_image">
+        </button>
+        <button data-value="Paper" class="button" id="paper" onclick="play(this.dataset.value)">
+            <img id="Paper" src="paper.png" alt="paper_image">
+        </button>
+        <button data-value="Scissor" class="button" id="scissor" onclick="play(this.dataset.value)">
+            <img id="Scissor" src="scissor.png" alt="scissor_image">
+        </button>
+        
+        
+    </div>
+    
+
+    <footer>Create by Arussel at https://github.com/Arussel1 </footer>
+</body>
+<script src="script.js"></script>
+</html>
+
+<!-- Plan to make rock paper scissor
+Step 1: HTML 
+Get a basic layout for rock paper scissor with title, 3 img representing rock,paper and scissor, footer, intruction and scoreboard
+Step 2: JS
+Add eventlistener (click) in rock, paper and scissor return corresponding result
+Add function to randomize choice of computer, function to check win/lose/draw and and increase player or computer point
+Step 3: CSS
+Background color, title styling and text color changing-->
