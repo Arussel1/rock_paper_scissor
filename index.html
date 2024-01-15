@@ -9,24 +9,30 @@
     <title>Rock Paper Scissor</title>
 </head>
 <body>
-    <h1>Rock Paper Scissor</h1>
-    <h2>3 Choices| First to 7| Play against AI</h2>
+    <div class="header">
+        <h2 id="playertext"> Player choice</h2>
+        <h1>Rock Paper Scissor</h1>
+        <h2 id="computertext"> Computer choice</h2>
+    </div>
+   
     <div class="container1">
+        <img id="playerdisplay"  width="187" height="173">
         <h2>Player score: </h2>
         <h2 id="pscore">0</h2>
         <h2> Computer score: </h2>
         <h2 id="cscore">0</h2>
+        <img id="computerdisplay"  width="187" height="173">
     </div>
     <h2 id="displaytext">Start the game by clicking at your choice</h2>
     <div class="container">
-        <button data-value="Rock" class="button" id="rock" onclick="play(this.dataset.value)">
-            <img id="Rock" src="rock.png" alt="rock_image">
+        <button data-value="Rock" class="button" id="rock" onclick="play(this.dataset.value)" >
+            <img id="Rock" src="rock.png" alt="rock_image", width="250",height="231">
         </button>
-        <button data-value="Paper" class="button" id="paper" onclick="play(this.dataset.value)">
-            <img id="Paper" src="paper.png" alt="paper_image">
+        <button data-value="Paper" class="button" id="paper" onclick="play(this.dataset.value)" >
+            <img id="Paper" src="paper.png" alt="paper_image", width="250",height="231">
         </button>
-        <button data-value="Scissor" class="button" id="scissor" onclick="play(this.dataset.value)">
-            <img id="Scissor" src="scissor.png" alt="scissor_image">
+        <button data-value="Scissor" class="button" id="scissor" onclick="play(this.dataset.value)" >
+            <img id="Scissor" src="scissor.png" alt="scissor_image", width="250",height="231">
         </button>
         
         

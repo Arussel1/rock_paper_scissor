@@ -11,10 +11,12 @@ h1,footer,h2{
 .container1{
     display:flex;
     justify-content:center;
-    margin-top:2px;
+    margin-top:0px;
     margin-bottom: 2px;
 }
-
+#displaytext{
+    margin-top: 0px;
+}
 button{
     background-color: white;
     border:0px;
@@ -27,4 +29,17 @@ button:hover{
 #pscore,#cscore{
     padding-left: 10px;
     padding-right: 10px;
+}
+#playerdisplay,#playertext{
+    margin-right: auto;
+}
+#computerdisplay,#computertext{
+    margin-left: auto;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+#playerdisplay{
+    color:white;
 }

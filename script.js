@@ -6,7 +6,8 @@ const ComputerWins = {
     "Scissor":"Paper",
     "Paper":"Rock"
 }
-
+let playerimg = document.querySelector("#playerdisplay");
+let computerimg = document.querySelector("#computerdisplay");
 function play(PlayerChoice){
     if(PlayerScore == 7 || ComputerScore == 7){
         PlayerScore = 0;
@@ -15,16 +16,18 @@ function play(PlayerChoice){
         document.getElementById("pscore").innerText = PlayerScore;
     }
     let ComputerChoice = ComputerChoices[Math.floor(Math.random() * 3)];
+    playerimg.src = PlayerChoice + ".png";
+    computerimg.src = ComputerChoice + ".png";
     if(PlayerChoice == ComputerChoice){
-        document.getElementById("displaytext").innerText = ComputerChoice + " vs " + PlayerChoice + ". It's a tie";
+        document.getElementById("displaytext").innerText =  "It's a tie";
     }else{
         if(ComputerWins[ComputerChoice] == PlayerChoice){
-            document.getElementById("displaytext").innerText = ComputerChoice + " vs " + PlayerChoice +  ". Computer gets 1 point";
+            document.getElementById("displaytext").innerText = "Computer gets 1 point";
             ComputerScore++;
             document.getElementById("cscore").innerText = ComputerScore;
             document.getElementById("displaytext").style.color = "red";
         }else{
-            document.getElementById("displaytext").innerText = ComputerChoice + " vs " + PlayerChoice + ". Player gets 1 point";
+            document.getElementById("displaytext").innerText = "Player gets 1 point";
             document.getElementById("displaytext").style.color = "green";
             PlayerScore++;
             document.getElementById("pscore").innerText = PlayerScore;
