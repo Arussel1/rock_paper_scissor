@@ -20,6 +20,7 @@ function play(PlayerChoice){
     computerimg.src = ComputerChoice + ".png";
     if(PlayerChoice == ComputerChoice){
         document.getElementById("displaytext").innerText =  "It's a tie";
+        document.getElementById("displaytext").style.color = "black";
     }else{
         if(ComputerWins[ComputerChoice] == PlayerChoice){
             document.getElementById("displaytext").innerText = "Computer gets 1 point";
