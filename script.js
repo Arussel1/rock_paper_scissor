@@ -16,8 +16,8 @@ function play(PlayerChoice){
         document.getElementById("pscore").innerText = PlayerScore;
     }
     let ComputerChoice = ComputerChoices[Math.floor(Math.random() * 3)];
-    playerimg.src = PlayerChoice + ".png";
-    computerimg.src = ComputerChoice + ".png";
+    playerimg.src = PlayerChoice.toLowerCase() + ".png";
+    computerimg.src = ComputerChoice.toLowerCase() + ".png";
     if(PlayerChoice == ComputerChoice){
         document.getElementById("displaytext").innerText =  "It's a tie";
         document.getElementById("displaytext").style.color = "black";
