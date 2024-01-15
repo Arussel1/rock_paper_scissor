@@ -17,6 +17,7 @@ function play(PlayerChoice){
     let ComputerChoice = ComputerChoices[Math.floor(Math.random() * 3)];
     if(PlayerChoice == ComputerChoice){
         document.getElementById("displaytext").innerText = ComputerChoice + " vs " + PlayerChoice + ". It's a tie";
+        document.getElementById("displaytext").style.color = "red";
     }else{
         if(ComputerWins[ComputerChoice] == PlayerChoice){
             document.getElementById("displaytext").innerText = ComputerChoice + " vs " + PlayerChoice +  ". Computer gets 1 point";
@@ -24,6 +25,7 @@ function play(PlayerChoice){
             document.getElementById("cscore").innerText = ComputerScore;
         }else{
             document.getElementById("displaytext").innerText = ComputerChoice + " vs " + PlayerChoice + ". Player gets 1 point";
+            document.getElementById("displaytext").style.color = "green";
             PlayerScore++;
             document.getElementById("pscore").innerText = PlayerScore;
         }
